@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cakey Place</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Homepage -->
+  <section id="homepage">
+    <h1>🍰 Cakey Place</h1>
+    <button onclick="showSection('cake-builder')">
+      Cake cheskundam dha 😋
+    </button>
+    <button onclick="showSection('memory-match')">
+      Gurthunda?
+    </button>
+  </section>
+
+  <!-- Cake Builder Page -->
+  <section id="cake-builder" style="display: none;">
+    <h2>🎂 Build Your Cake</h2>
+
+    <h3>Choose a Flavor:</h3>
+    <div class="flavors">
+      <div draggable="true">Chawky 🍫</div>
+      <div draggable="true">Strawby 🍓</div>
+      <div draggable="true">Appy 🍍</div>
+    </div>
+
+    <h3>Choose a Frosting:</h3>
+    <div class="frostings">
+      <div draggable="true">Vanilla 🍦</div>
+      <div draggable="true">Not so vanilla 🧈</div>
+      <div draggable="true" onclick="alert('Freaky eh? 😉')">Bonda- 🤪</div>
+    </div>
+
+    <h3>Choose Toppings:</h3>
+    <div class="toppings">
+      <div draggable="true">Daaaaan-imma 🍒</div>
+      <div draggable="true">Mango 🥭</div>
+      <div draggable="true">Choco Chips 🍫</div>
+    </div>
+
+    <div class="cake-drop-zone" ondragover="event.preventDefault()" ondrop="handleDrop(event)">
+      <p>🧁 Drop your cake parts here!</p>
+    </div>
+
+    <h3>Choose Cake Shape:</h3>
+    <button onclick="showMessage('heart')">❤️ Heart</button>
+    <button onclick="showMessage('circle')">⚪ Circle</button>
+    <button onclick="showMessage('square')">🟫 Square</button>
+
+    <div id="cake-message"></div>
+  </section>
+
+  <!-- Memory Match Game -->
+  <section id="memory-match" style="display: none;">
+    <h2>🧠 Gurthunda?</h2>
+    <div class="card-grid" id="cardGrid"></div>
+    <div id="matchMessage"></div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
